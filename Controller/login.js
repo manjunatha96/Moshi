@@ -5,7 +5,8 @@ const bcrypt=require('bcryptjs')
 const Joi=require('joi')
 
 router.get('/logins', async(req,res)=>{
-    res.send('hii')
+    const result=await register.find()
+    await res.send(result)
 })
 
 router.post('/posting', async(req,res)=>{

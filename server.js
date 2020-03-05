@@ -3,7 +3,9 @@ const express=require('express')
 const bodyPaser=require('body-parser')
 const app=express()
 const winston=require('winston')
+const cors=require('cors')
 
+app.use(cors())
 app.use(bodyPaser.json())
 app.use(bodyPaser.urlencoded({extended:false}))
 
